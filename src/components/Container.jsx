@@ -33,7 +33,6 @@ import Notion from "./Image/notion.png";
 import Starbucks from "./Image/starbucks.png";
 import Paint from "./Image/paint.png";
 import Pabi from "./Image/pabi.png";
-import Modal from "./Modal";
 import { useState } from "react";
 
 export default function Container() {
@@ -45,14 +44,6 @@ export default function Container() {
   const Paintgit = "https://github.com/sobop/paintjs";
   const Starurl = "https://seopstarbucks.netlify.app";
   const Stargit = "https://github.com/sobop/Starbucks";
-
-  const [modalVisible, setModalVisible] = useState(false);
-  const openModal = () => {
-    setModalVisible(true);
-  };
-  const closeModal = () => {
-    setModalVisible(false);
-  };
 
   return (
     <MainContainer>
@@ -158,17 +149,7 @@ export default function Container() {
               <br />
               ※ 아래 링크는 8월 이전에 활동했던 내용입니다.
               <br />
-              <Button type="button" value="More" onClick={openModal}></Button>
-              {modalVisible && (
-                <Modal
-                  visible={modalVisible}
-                  closable={true}
-                  maskClosable={true}
-                  onClose={closeModal}
-                >
-                  Hello
-                </Modal>
-              )}
+              {/* <Button type="button" value="More"></Button> */}
               <Button
                 type="button"
                 value="Notion"
