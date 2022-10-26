@@ -33,13 +33,12 @@ import Notion from "./Image/notion.png";
 import Starbucks from "./Image/starbucks.png";
 import Paint from "./Image/paint.png";
 import Pabi from "./Image/pabi.png";
-import { useState } from "react";
 
 export default function Container() {
   const PabiNotion =
     "https://flint-house-fc7.notion.site/PA-BI-951f4866ae704007bbda0ead81dc37a5";
   const Pabigit = "https://github.com/Government-Demo/demo/tree/main/pa_bi_web";
-  const PabiMore = "https://seoportfolio.netlify.app/generic.html";
+  // const PabiMore = "https://seoportfolio.netlify.app/generic.html";
   const Painturl = "https://seoppaint.netlify.app";
   const Paintgit = "https://github.com/sobop/paintjs";
   const Starurl = "https://seopstarbucks.netlify.app";
