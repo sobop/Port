@@ -1,13 +1,7 @@
-import Container from "./components/Container";
-import Navbar from "./components/Navbar";
+import Router from "./router";
 
 function App() {
-  return (
-    <>
-      <Navbar></Navbar>
-      <Container></Container>
-    </>
-  );
+  return <Router />;
 }
 
 export default App;

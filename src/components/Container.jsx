@@ -33,8 +33,10 @@ import Notion from "./Image/notion.png";
 import Starbucks from "./Image/starbucks.png";
 import Paint from "./Image/paint.png";
 import Pabi from "./Image/pabi.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Container() {
+  let navigate = useNavigate();
   const PabiNotion =
     "https://flint-house-fc7.notion.site/PA-BI-951f4866ae704007bbda0ead81dc37a5";
   const Pabigit = "https://github.com/Government-Demo/demo/tree/main/pa_bi_web";
@@ -65,13 +67,14 @@ export default function Container() {
               alt="github"
               style={{ width: "25px", marginRight: "5px" }}
             />
-            <a
-              href="https://github.com/sobop"
-              target="_blank"
-              style={{ textDecorationLine: "none" }}
+            <span
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                window.open("https://github.com/sobop");
+              }}
             >
               https://github.com/sobop
-            </a>
+            </span>
           </AboutMeBox>
         </AboutMeDiv>
         <Introduce>
@@ -137,7 +140,7 @@ export default function Container() {
       <Project id="3">
         <Title>💻 Project</Title>
         <PjDiv>
-          <PjImg src={Pabi} alt="starbucks"></PjImg>
+          <PjImg src={Pabi} alt="pabi"></PjImg>
           <PjBox>
             <PjTitle>Pa-Bi</PjTitle>
             <PjContents>
@@ -161,6 +164,13 @@ export default function Container() {
                 value="Github"
                 onClick={() => {
                   window.open(Pabigit);
+                }}
+              ></Button>
+              <Button
+                type="button"
+                value="More"
+                onClick={() => {
+                  navigate("/more");
                 }}
               ></Button>
             </PjContents>
@@ -196,7 +206,10 @@ export default function Container() {
           <PjBox>
             <PjTitle>Pa-Bi</PjTitle>
             <PjContents>
-              굵기 기능, 채우기 기능과 저장하기 기능이 있는 그림판입니다.
+              JS를 배우는 단계에 만들어본 프로젝트입니다.
+              <br />
+              채우기, 저장하기, 굵기 기능이 있는 그림판입니다.
+              <br />
               <Button
                 type="button"
                 value="Site"

@@ -27,6 +27,9 @@ export const NavLi = styled.li`
 export const MainContainer = styled.div`
   max-width: 1000px;
   margin: 80px auto 0;
+  @media screen and (max-width: 1000px) {
+    max-width: 800px;
+  }
 `;
 export const Title = styled.div`
   font-size: 50px;
@@ -84,6 +87,9 @@ export const PjDiv = styled.div`
   display: flex;
   margin-bottom: 50px;
   align-items: center;
+  @media screen and (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 `;
 export const PjImg = styled.img`
   width: 350px;
@@ -120,4 +126,12 @@ export const Button = styled.input`
     background-color: #e0e0e0;
     transition: 0.3s;
   }
+`;
+export const PjVideo = styled.video`
+  width: 550px;
+  height: 400px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  border: 1px solid rgb(228, 227, 226);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 `;
