@@ -33,7 +33,8 @@ import Notion from "./Image/notion.png";
 import Starbucks from "./Image/starbucks.png";
 import Paint from "./Image/paint.png";
 import Pabi from "./Image/pabi.png";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Container() {
   let navigate = useNavigate();
@@ -45,6 +46,10 @@ export default function Container() {
   const Paintgit = "https://github.com/sobop/paintjs";
   const Starurl = "https://seopstarbucks.netlify.app";
   const Stargit = "https://github.com/sobop/Starbucks";
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <MainContainer>

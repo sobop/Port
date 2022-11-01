@@ -10,8 +10,14 @@ import List from "./Image/리스트.mp4";
 import Login from "./Image/로그인.mp4";
 import Write from "./Image/글쓰기.mp4";
 import Main from "./Image/메인.mp4";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function More() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <MainContainer style={{ marginTop: "150px" }}>
       <PjTitle>메인 페이지</PjTitle>
